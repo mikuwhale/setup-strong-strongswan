@@ -19,7 +19,7 @@ fi
 # Variables
 
 STRONGSWAN_TMP="/tmp/strongswan"
-STRONGSWAN_VERSION="5.3.5"
+STRONGSWAN_VERSION="5.5.0"
 #STRONGSWAN_USER
 #STRONGSWAN_PSK
 
@@ -431,6 +431,9 @@ chmod +x /etc/init.d/vpn-assist
 bigEcho "Starting up VPN..."
 
 /etc/init.d/vpn-assist start
+
+bigEcho "Set VPN to auto start..."
+update-rc.d vpn-assist defaults
 
 #################################################################
 
